@@ -105,3 +105,4 @@ Traceback (most recent call last):
     if hasattr(obj, "jinja_pass_arg"):
        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 jinja2.exceptions.UndefinedError: 'sqlalchemy.orm.collections.InstrumentedList object' has no attribute 'all'
+2023-02-26 14:13:09,086 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
