@@ -1,0 +1,135 @@
+2023-02-25 23:08:52,902 ERROR: Exception on /login [POST] [in C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1744]
+Traceback (most recent call last):
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Code\EdAcademy\app\routes.py", line 39, in login
+    if user is None or not user.check_password(form.password.data):
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Code\EdAcademy\app\models.py", line 35, in check_password
+    return check_password_hash(self.password_hash,password)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\security.py", line 103, in check_password_hash
+    if pwhash.count("$") < 2:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'count'
+2023-02-25 23:09:59,035 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:43]
+2023-02-25 23:10:35,149 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:43]
+2023-02-25 23:10:42,733 ERROR: Exception on /login [POST] [in C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1744]
+Traceback (most recent call last):
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Code\EdAcademy\app\routes.py", line 39, in login
+    if user is None or not user.check_password(form.password.data):
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Code\EdAcademy\app\models.py", line 35, in check_password
+    return check_password_hash(self.password_hash,password)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\security.py", line 103, in check_password_hash
+    if pwhash.count("$") < 2:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'count'
+2023-02-25 23:11:00,081 ERROR: Exception on /login [POST] [in C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1744]
+Traceback (most recent call last):
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Code\EdAcademy\app\routes.py", line 39, in login
+    if user is None or not user.check_password(form.password.data):
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Code\EdAcademy\app\models.py", line 35, in check_password
+    return check_password_hash(self.password_hash,password)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\security.py", line 103, in check_password_hash
+    if pwhash.count("$") < 2:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'count'
+2023-02-25 23:11:18,345 ERROR: Exception on /login [POST] [in C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1744]
+Traceback (most recent call last):
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Code\EdAcademy\app\routes.py", line 39, in login
+    if user is None or not user.check_password(form.password.data):
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Code\EdAcademy\app\models.py", line 35, in check_password
+    return check_password_hash(self.password_hash,password)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\werkzeug\security.py", line 103, in check_password_hash
+    if pwhash.count("$") < 2:
+       ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'count'
+2023-02-25 23:11:34,395 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:43]
+2023-02-25 23:11:49,071 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:43]
+2023-02-25 23:11:52,888 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:43]
+2023-02-25 23:13:16,014 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:43]
+2023-02-25 23:15:06,373 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:43]
+2023-02-25 23:18:32,956 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:43]
+2023-02-25 23:25:14,607 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:43]
+2023-02-25 23:27:19,266 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:43]
+2023-02-25 23:27:30,854 ERROR: Exception on /explore [GET] [in C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1744]
+Traceback (most recent call last):
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Code\EdAcademy\app\routes.py", line 62, in explore
+    courses = Course.query.all().paginate(page=page,per_page=app.config['POSTS_PER_PAGE'],error_out=False)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'paginate'
+2023-02-25 23:28:37,528 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:43]
+2023-02-25 23:31:05,032 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:43]
+2023-02-25 23:31:43,385 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:43]
+2023-02-25 23:33:31,462 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:43]
+2023-02-26 00:51:00,497 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:45]
+2023-02-26 00:55:49,554 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:45]
+2023-02-26 01:24:31,778 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 01:30:57,617 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]

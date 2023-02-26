@@ -1,0 +1,86 @@
+2023-02-26 13:27:57,486 ERROR: Exception on /explore [GET] [in C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1744]
+Traceback (most recent call last):
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Code\EdAcademy\app\routes.py", line 112, in explore
+    return render_template('explore.html', title='Explore', courses=courses, added=added)
+                                                                                   ^^^^^
+NameError: name 'added' is not defined
+2023-02-26 13:28:14,557 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 13:31:09,476 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 13:40:03,266 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 13:40:16,779 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 13:49:33,427 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 13:58:38,854 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 13:59:09,662 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 14:00:05,928 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 14:00:30,776 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 14:03:33,388 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 14:03:37,183 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 14:03:54,634 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 14:11:37,418 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 14:12:07,522 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 14:12:09,505 ERROR: Exception on /explore [GET] [in C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1744]
+Traceback (most recent call last):
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Code\EdAcademy\app\routes.py", line 115, in explore
+    return render_template('explore.html', title='Explore', courses=courses)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Code\EdAcademy\app\templates\explore.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "C:\Code\EdAcademy\app\templates\base.html", line 1, in top-level template code
+    {% extends 'bootstrap/base.html' %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block 'body'
+    {% block content -%}
+  File "C:\Code\EdAcademy\app\templates\base.html", line 47, in block 'content'
+    {% block app_content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Code\EdAcademy\app\templates\explore.html", line 11, in block 'app_content'
+    <h5> Students enrolled: {{course.students.count()}}</h5>
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: InstrumentedList.count() takes exactly one argument (0 given)
+2023-02-26 14:12:29,018 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
