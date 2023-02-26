@@ -2,7 +2,7 @@
 
 {% block app_content %}
     <h1>Hi, {{ current_user.username }}!</h1>
-    <p>This is your personalized dashboard. Find new courses to add and learn from on the Explore tab. After you have finished your course, you can leave the </p>
+    <p>This is your personalized dashboard. Find new courses to add and learn from on the Explore tab.</p>
     {% for course in current_user.courses %}
     <table class="table table-hover">
         <tr>
