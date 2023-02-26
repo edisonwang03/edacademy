@@ -1,5 +1,7 @@
 # EdAcademy
 
+https://www.youtube.com/watch?v=nhALP2m-tKM&t=1s 
+
 ## Inspiration
 I was inspired by Khan Academy's model of providing free, online educational resources to students of all ages. I grew up learning from Khan Academy, and I hope to provide even more learning opportunities on an alternative platform.
 
