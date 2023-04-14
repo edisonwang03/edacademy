@@ -106,3 +106,9 @@ Traceback (most recent call last):
        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 jinja2.exceptions.UndefinedError: 'sqlalchemy.orm.collections.InstrumentedList object' has no attribute 'all'
 2023-02-26 14:13:09,086 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 14:45:51,079 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 14:53:26,590 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 18:47:00,574 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 19:11:16,721 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-02-26 19:34:13,428 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 16:45:39,741 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
