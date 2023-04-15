@@ -13,6 +13,8 @@ from app.forms import RegistrationForm
 from app.forms import ResetPasswordRequestForm
 from app.email import send_password_reset_email
 from app.forms import ResetPasswordForm
+from app.auto_course_generator import generate_topics, generate_body
+
 
 
 @app.route('/reset_password/<token>', methods=['GET', 'POST'])
@@ -96,7 +98,7 @@ def register():
 @app.route('/explore', methods=['GET','POST'])
 @login_required
 def explore():
-    courses = Course.query.order_by(Course.timestamp.desc()).all()
+    courses = Course.query.order_by(Course.title).all()
     for c in current_user.courses:
         courses.remove(c)
     
@@ -115,5 +117,17 @@ def add_course(course_title):
 def remove_course(course_title):
     course = Course.query.filter_by(title=course_title).first()
     current_user.deregister(course)
+    db.session.commit()
+    return redirect('/index')
+
+@app.route('/generate_courses/<course_title>', methods=['GET','POST'])
+@login_required
+def generate_courses(course_title):
+    base = Course.query.filter_by(title=course_title).first()
+    base.hasGeneratedRelatedCourses = True
+    topics = generate_topics(base)
+    for t in topics:
+        course = Course(title=t,body=generate_body(t))
+        db.session.add(course)
     db.session.commit()
     return redirect('/index')

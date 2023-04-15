@@ -9,10 +9,26 @@
             <td width="20px">
                 <h3>{{ course.title }}</h3>
                 <p>{{ course.body }}</p>
-                <form action="/remove_course/{{course.title}}" method="post">
-                    <input type="hidden" value="{{course.title}}">
-                    <button type="submit">Remove</button>
-                </form>
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <form action="/remove_course/{{course.title}}" method="post">
+                            <input type="hidden" value="{{course.title}}">
+                            <button class="btn btn-danger" type="submit">Remove from Dashboard</button>
+                        </form>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="Second group">
+                        <form action="/generate_courses/{{course.title}}" method="post">
+                            <input type="hidden" value="{{course.title}}">
+                            {% if not course.hasGeneratedRelatedCourses %}
+                                <button class="btn btn-primary" type="submit">Generate related courses</button>
+                            {% else %}
+                                <button class="btn btn-primary" type="submit" disabled>Generate related courses</button>
+                            {% endif %}
+                        </form>
+                    </div>
+                  </div>
+                
+                
             </td>
         </tr>
     </table>

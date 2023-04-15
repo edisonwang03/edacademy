@@ -10,7 +10,7 @@
                 <p>{{course.body|truncate(50, True)}}</p>
                 <form action="/add_course/{{course.title}}" method="post">
                     <input type="hidden" value="{{course.title}}">
-                    <button type="submit">Add</button>
+                    <button class="btn btn-success" type="submit">Add to Dashboard</button>
                 </form>
             </td>
         </tr>
