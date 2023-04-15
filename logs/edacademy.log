@@ -34,3 +34,43 @@
 2023-04-15 14:02:41,477 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
 2023-04-15 14:03:58,579 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
 2023-04-15 14:05:41,348 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-15 18:52:19,939 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-15 18:54:04,155 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-15 18:54:16,660 ERROR: Exception on /generate_courses/Algorithms and Data Structures [POST] [in C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1744]
+Traceback (most recent call last):
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Code\EdAcademy\app\routes.py", line 128, in generate_courses
+    topics = generate_topics(base)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Code\EdAcademy\app\auto_course_generator.py", line 7, in generate_topics
+    response = openai.Completion.create(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\openai\api_resources\completion.py", line 25, in create
+    return super().create(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\openai\api_resources\abstract\engine_api_resource.py", line 153, in create
+    response, _, api_key = requestor.request(
+                           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\openai\api_requestor.py", line 226, in request
+    resp, got_stream = self._interpret_response(result, stream)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\openai\api_requestor.py", line 620, in _interpret_response
+    self._interpret_response_line(
+  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\openai\api_requestor.py", line 683, in _interpret_response_line
+    raise self.handle_error_response(
+openai.error.AuthenticationError: Incorrect API key provided: "sk-e3HM*****************************************2Jf". You can find your API key at https://platform.openai.com/account/api-keys.
+2023-04-15 18:55:01,409 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
