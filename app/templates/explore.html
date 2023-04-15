@@ -6,10 +6,11 @@
     <table class="table table-hover">
         <tr>
             <td width="20px">
-                <form method="POST">
-                    <h4>{{ course.title }}</h4>
-                    <input name="course" type="submit" 
-                    class="btn btn-success" value="Add {{ course.title }}">
+                <h3>{{course.title}}</h3>
+                <p>{{course.body|truncate(50, True)}}</p>
+                <form action="/add_course/{{course.title}}" method="post">
+                    <input type="hidden" value="{{course.title}}">
+                    <button type="submit">Add</button>
                 </form>
             </td>
         </tr>

@@ -1,114 +1,18 @@
-2023-02-26 14:12:29,937 ERROR: Exception on /explore [GET] [in C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1744]
-Traceback (most recent call last):
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Code\EdAcademy\app\routes.py", line 115, in explore
-    return render_template('explore.html', title='Explore', courses=courses)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\templating.py", line 147, in render_template
-    return _render(app, template, context)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\templating.py", line 130, in _render
-    rv = template.render(context)
-         ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Code\EdAcademy\app\templates\explore.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Code\EdAcademy\app\templates\base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
-    {% block body -%}
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block 'body'
-    {% block content -%}
-  File "C:\Code\EdAcademy\app\templates\base.html", line 47, in block 'content'
-    {% block app_content %}{% endblock %}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Code\EdAcademy\app\templates\explore.html", line 11, in block 'app_content'
-    <h5> Students enrolled: {{len(course.students)}}</h5>
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\utils.py", line 83, in from_obj
-    if hasattr(obj, "jinja_pass_arg"):
-       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-jinja2.exceptions.UndefinedError: 'len' is undefined
-2023-02-26 14:12:53,216 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
-2023-02-26 14:12:56,504 ERROR: Exception on /explore [GET] [in C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py:1744]
-Traceback (most recent call last):
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 2528, in wsgi_app
-    response = self.full_dispatch_request()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1825, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1823, in full_dispatch_request
-    rv = self.dispatch_request()
-         ^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\app.py", line 1799, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
-    return current_app.ensure_sync(func)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Code\EdAcademy\app\routes.py", line 115, in explore
-    return render_template('explore.html', title='Explore', courses=courses)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\templating.py", line 147, in render_template
-    return _render(app, template, context)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask\templating.py", line 130, in _render
-    rv = template.render(context)
-         ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\environment.py", line 1301, in render
-    self.environment.handle_exception()
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\environment.py", line 936, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "C:\Code\EdAcademy\app\templates\explore.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "C:\Code\EdAcademy\app\templates\base.html", line 1, in top-level template code
-    {% extends 'bootstrap/base.html' %}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
-    {%- block html %}
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
-    {% block body -%}
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block 'body'
-    {% block content -%}
-  File "C:\Code\EdAcademy\app\templates\base.html", line 47, in block 'content'
-    {% block app_content %}{% endblock %}
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Code\EdAcademy\app\templates\explore.html", line 11, in block 'app_content'
-    <h5> Students enrolled: {{course.students.all().count()}}</h5>
-    ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\ediso\AppData\Local\Programs\Python\Python311\Lib\site-packages\jinja2\utils.py", line 83, in from_obj
-    if hasattr(obj, "jinja_pass_arg"):
-       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-jinja2.exceptions.UndefinedError: 'sqlalchemy.orm.collections.InstrumentedList object' has no attribute 'all'
-2023-02-26 14:13:09,086 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
-2023-02-26 14:45:51,079 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
-2023-02-26 14:53:26,590 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
-2023-02-26 18:47:00,574 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
-2023-02-26 19:11:16,721 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
-2023-02-26 19:34:13,428 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
-2023-04-14 16:45:39,741 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 17:19:16,074 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 17:21:22,161 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 17:24:37,267 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 17:33:22,736 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 17:36:34,883 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 17:37:46,011 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 18:02:31,805 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 18:03:08,488 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 18:04:30,433 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 18:05:28,702 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 18:06:37,221 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 18:08:45,946 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 18:13:55,250 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 18:14:23,526 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 18:14:47,880 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 18:15:28,232 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 18:31:20,472 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-04-14 18:36:07,045 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]

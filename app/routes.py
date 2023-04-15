@@ -50,12 +50,6 @@ def reset_password_request():
 @app.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
-    if request.method == 'POST':
-        course = request.form['course'][7:]
-        c = Course.query.filter_by(title=course).first()
-        current_user.deregister(c)
-        db.session.commit()
-    
     courses = Course.query.all()
     return render_template('index.html', title='Dashboard', courses=courses)
 
@@ -102,14 +96,24 @@ def register():
 @app.route('/explore', methods=['GET','POST'])
 @login_required
 def explore():
-    if request.method == 'POST':
-        course = request.form['course'][4:]
-        c = Course.query.filter_by(title=course).first()
-        current_user.register(c)
-        db.session.commit()
-    
     courses = Course.query.order_by(Course.timestamp.desc()).all()
     for c in current_user.courses:
         courses.remove(c)
     
     return render_template('explore.html', title='Explore', courses=courses)
+
+@app.route('/add_course/<course_title>', methods=['GET','POST'])
+@login_required
+def add_course(course_title):
+    course = Course.query.filter_by(title=course_title).first()
+    current_user.register(course)
+    db.session.commit()
+    return redirect('/explore')
+
+@app.route('/remove_course/<course_title>', methods=['GET','POST'])
+@login_required
+def remove_course(course_title):
+    course = Course.query.filter_by(title=course_title).first()
+    current_user.deregister(course)
+    db.session.commit()
+    return redirect('/index')

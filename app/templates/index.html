@@ -7,12 +7,11 @@
     <table class="table table-hover">
         <tr>
             <td width="20px">
-                <form method="POST">
-                    <h3>{{ course.title }}</h3>
-                    {{ course.body }}
-                    <br>
-                    <br>
-                        <input type="submit" class="btn btn-danger" name="course" value="Remove {{ course.title }}">
+                <h3>{{ course.title }}</h3>
+                <p>{{ course.body }}</p>
+                <form action="/remove_course/{{course.title}}" method="post">
+                    <input type="hidden" value="{{course.title}}">
+                    <button type="submit">Remove</button>
                 </form>
             </td>
         </tr>
