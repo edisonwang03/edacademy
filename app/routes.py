@@ -14,6 +14,7 @@ from app.forms import ResetPasswordRequestForm
 from app.email import send_password_reset_email
 from app.forms import ResetPasswordForm
 from app.auto_course_generator import generate_topics, generate_body
+import os
 
 
 
@@ -133,4 +134,4 @@ def generate_courses(course_title):
     return redirect('/index')
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(debug=True, port=os.getenv("PORT", default=5000))
