@@ -74,3 +74,5 @@ Traceback (most recent call last):
     raise self.handle_error_response(
 openai.error.AuthenticationError: Incorrect API key provided: "sk-e3HM*****************************************2Jf". You can find your API key at https://platform.openai.com/account/api-keys.
 2023-04-15 18:55:01,409 INFO: EdAcademy startup [in C:\Code\EdAcademy\app\__init__.py:47]
+2023-05-11 22:01:04,902 INFO: EdAcademy startup [in d:\Code\EdAcademy\app\__init__.py:47]
+2023-05-11 22:01:06,196 INFO: EdAcademy startup [in d:\Code\EdAcademy\app\__init__.py:47]

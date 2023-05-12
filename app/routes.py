@@ -132,6 +132,3 @@ def generate_courses(course_title):
         db.session.add(course)
     db.session.commit()
     return redirect('/index')
-
-if __name__ == '__main__':
-    app.run(debug=True, port=os.getenv("PORT", default=5000))
