@@ -1,7 +1,7 @@
 # EdAcademy
 
-Demo: https://www.youtube.com/watch?v=nhALP2m-tKM&t=1s 
-Website: https://edacademy-production.up.railway.app/login?next=%2F
+- Demo: https://www.youtube.com/watch?v=nhALP2m-tKM&t=1s 
+- Website: https://edacademy-production.up.railway.app/login?next=%2F
 
 ## Inspiration
 I was inspired by Khan Academy's model of providing free, online educational resources to students of all ages. I grew up learning from Khan Academy, and I hope to provide even more learning opportunities on an alternative platform.
